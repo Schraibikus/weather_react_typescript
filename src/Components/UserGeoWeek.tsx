@@ -10,7 +10,9 @@ export const UserGeoWeek: () => JSX.Element = () => {
     alert("Невозможно получить ваше местоположение");
   };
 
-  const success: (position: any) => Promise<void> = async (position) => {
+  const success: (position: GeolocationPosition) => Promise<void> = async (
+    position
+  ) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const response = await fetch(

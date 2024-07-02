@@ -25,11 +25,11 @@ export const CardWeather: FunctionComponent<ICardWeather> = ({
   sunset,
 }) => {
   const convertTime: (timeData: number) => string = (timeData: number) => {
-    const timeUtc = new Date(timeData * 1000);
+    const timeUtc: Date = new Date(timeData * 1000);
     timeUtc.setHours(timeUtc.getHours() + 3);
-    const hours = timeUtc.getHours();
-    const minutes = timeUtc.getMinutes();
-    const time = `${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
+    const hours: number = timeUtc.getHours();
+    const minutes: number = timeUtc.getMinutes();
+    const time: string = `${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
     return time;
   };
   if (city) {

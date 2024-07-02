@@ -18,10 +18,12 @@ export const UserGeo: () => JSX.Element = () => {
     alert("Невозможно получить ваше местоположение");
   };
 
-  const success: (position: any) => Promise<void> = async (position) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const response = await fetch(
+  const success: (position: GeolocationPosition) => Promise<void> = async (
+    position
+  ) => {
+    const latitude: number = position.coords.latitude;
+    const longitude: number = position.coords.longitude;
+    const response: Response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${KEY}&units=metric&lang=RU`
     );
     const result = await response.json();
@@ -36,7 +38,7 @@ export const UserGeo: () => JSX.Element = () => {
     setSunset(result.sys.sunset);
   };
 
-  const getUserGeo = () => {
+  const getUserGeo: () => void = () => {
     if (!navigator.geolocation) {
       alert("Geolocation не поддерживается вашим браузером");
     } else {

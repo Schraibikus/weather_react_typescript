@@ -14,7 +14,6 @@ export const UserCity: () => JSX.Element = () => {
   const [windSpeed, setWindSpeed] = useState("");
   const [sunrise, setSunrise] = useState("");
   const [sunset, setSunset] = useState("");
-
   const [value, setValue] = useState("");
   const changeCity = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -59,7 +58,6 @@ export const UserCity: () => JSX.Element = () => {
     setWindSpeed(result.wind.speed);
     setSunrise(result.sys.sunrise);
     setSunset(result.sys.sunset);
-    console.log(result);
   };
 
   return (

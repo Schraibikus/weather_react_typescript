@@ -8,4 +8,7 @@
 
 body {
   font-family: "Press Start 2P";
+  background-image: url("../public/cat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

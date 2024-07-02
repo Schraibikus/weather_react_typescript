@@ -1,7 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(min-content, 1fr);
+  grid-template-rows: 5vh 1fr;
+  padding: 0 30px;
 }
 
 .card__list {
@@ -15,14 +16,15 @@
   justify-content: center;
   gap: 1rem;
   grid-row: 2/3;
-  background-color: silver;
+  background-color: #772944;
   color: gold;
   border-radius: 1rem;
 }
 
 .card__cityName {
-  color: tomato;
-  margin-left: 20px;
+  color: #96adec;
+  letter-spacing: 3px;
+  margin: 1vh 0 1vh 20px;
   grid-row: 1/2;
   font-size: 20px;
 }
