@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header";
+import { UserCity } from "./Components/UserCity";
+import { UserGeo } from "./Components/UserGeo";
+import { useState } from "react";
+import { TabSection } from "./Components/TabSection";
+import { UserGeoWeek } from "./Components/UserGeoWeek";
+import { UserCityWeek } from "./Components/UserCityWeek";
 
-function App() {
+export const KEY: string = "15fbdc51ea7fa6a010dfab1c26227026";
+
+const App: React.FC = () => {
+  const [tab, setTad] = useState("userGeo");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <TabSection
+          active={tab}
+          onChange={(current: React.SetStateAction<string>) =>
+            setTad(current)
+          }
+        />
+        {tab === "userGeo" && <UserGeo />}
+        {tab === "userGeoWeek" && <UserGeoWeek />}
+        {tab === "userCity" && <UserCity />}
+        {tab === "userCityWeek" && <UserCityWeek />}
+      </main>
+    </>
   );
-}
+};
 
 export default App;
