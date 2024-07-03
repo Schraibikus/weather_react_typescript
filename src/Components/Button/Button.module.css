@@ -19,9 +19,8 @@
 
 .active {
   color: #fff;
-  /* border-color: tomato; */
   background-color: tomato;
-  animation: www 1s ease-in-out infinite;
+  animation: change-button-color 1.5s ease-in-out infinite;
 }
 
 .button:disabled {
@@ -30,7 +29,7 @@
   border-color: #ccc;
 }
 
-@keyframes www {
+@keyframes change-button-color {
   0% {
     background-color: #3e6ae1;
   }
