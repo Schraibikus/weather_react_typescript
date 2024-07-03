@@ -10,7 +10,7 @@ import { UserCityWeek } from "./Components/UserCityWeek";
 export const KEY: string = "15fbdc51ea7fa6a010dfab1c26227026";
 
 const App: React.FC = () => {
-  const [tab, setTad] = useState("userGeo");
+  const [tab, setTad] = useState("Узнать погоду");
 
   return (
     <>
@@ -18,12 +18,10 @@ const App: React.FC = () => {
       <main>
         <TabSection
           active={tab}
-          onChange={(current: React.SetStateAction<string>) =>
-            setTad(current)
-          }
+          onChange={(current: React.SetStateAction<string>) => setTad(current)}
         />
-        {tab === "userGeo" && <UserGeo />}
-        {tab === "userGeoWeek" && <UserGeoWeek />}
+        {tab === "Узнать погоду" && <UserGeo />}
+        {tab === "Узнать погоду на 5 дней" && <UserGeoWeek />}
         {tab === "userCity" && <UserCity />}
         {tab === "userCityWeek" && <UserCityWeek />}
       </main>

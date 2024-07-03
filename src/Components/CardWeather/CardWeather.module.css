@@ -6,9 +6,9 @@
 }
 
 .card__list {
-  max-width: 400px;
+  max-width: 18vw;
   margin-left: 20px;
-  padding: 10px;
+  padding: 1rem;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@
   background-color: #772944;
   color: gold;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .card__cityName {

@@ -48,7 +48,7 @@ export const UserGeo: () => JSX.Element = () => {
 
   return (
     <>
-      <Button onClick={getUserGeo}>SearchGeo</Button>
+      <Button onClick={getUserGeo}>Узнать погоду</Button>
       <CardWeather
         city={city}
         temp={temp}

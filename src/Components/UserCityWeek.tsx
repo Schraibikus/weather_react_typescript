@@ -13,7 +13,7 @@ export const UserCityWeek: () => JSX.Element = () => {
     setValueError("");
   };
   const [valueError, setValueError] = useState(
-    "Поле поиска не может быть пустым"
+    "Заполните поле поиска населенного пункта!"
   );
   const [formValid, setFormValid] = useState(false);
   useEffect(() => {
@@ -49,7 +49,7 @@ export const UserCityWeek: () => JSX.Element = () => {
 
   return (
     <>
-      <form>
+      <form className="user__form">
         {valueError && <div className="error">{valueError}</div>}
         <Input value={value} onChange={changeCity} />
         <Button disabled={!formValid} onClick={getUserCity}>

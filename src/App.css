@@ -5,5 +5,30 @@ li {
 .error {
   position: absolute;
   font-size: 10px;
-  margin-left: 30px;
+  margin-left: 1rem;
+  color: red;
+}
+
+.section__tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__tabs-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.section__tabs-items button {
+  min-height: 15vh;
+  border-radius: 1rem;
+}
+
+.section__tabs-text {
+  margin-left: 1rem;
+}
+
+.user__form {
+  margin-top: 1rem;
 }

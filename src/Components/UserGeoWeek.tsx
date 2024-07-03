@@ -33,7 +33,7 @@ export const UserGeoWeek: () => JSX.Element = () => {
 
   return (
     <>
-      <Button onClick={getUserGeoWeek}>SearchGeoWeek</Button>
+      <Button onClick={getUserGeoWeek}>Узнать погоду на 5 дней</Button>
       <CardWeatherWeek city={city} data={data} />
     </>
   );
